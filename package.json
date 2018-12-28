@@ -1,10 +1,21 @@
 {
-  "name":"gatsby-remark-tumble-media",
-  "author":"Isaac Z. Schlueter <i@izs.me>",
+  "name": "gatsby-remark-tumble-media",
+  "author": "Isaac Z. Schlueter <i@izs.me>",
   "keywords": [
     "gatsby",
     "gatsby-plugin",
     "gatsby-transformer-remark",
     "gatsby-remark"
-  ]
+  ],
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "sharp": "^0.21.1"
+  },
+  "devDependencies": {
+    "tap": "^12.1.1"
+  },
+  "scripts": {
+    "test": "tap test/*.js --cov",
+    "snap": "TAP_SNAPSHOT=1 npm test"
+  }
 }

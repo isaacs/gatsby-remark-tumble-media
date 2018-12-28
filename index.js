@@ -108,7 +108,6 @@ const photoSet = (set, width)  => {
     const img = p => {
       const ret = `<img width=${imgWidth}
         class="w-${imgWidth}"
-        data-p='${JSON.stringify(p)}'
         src="${p.url}" alt="${p.alt}">`
 
       if (p.scaleHeight <= rowHeightNum)
@@ -206,7 +205,7 @@ const mediaWidth = (node, width) => {
 
     // scale up or down appropriately
     const endHeight = startWidth && startHeight
-      ? startHeight * width / startWidth
+      ? Math.round(1000 * startHeight * width / startWidth) / 1000
       : null
 
     node.attr('width', width)
