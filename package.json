@@ -24,5 +24,12 @@
   "files": [
     "index.js"
   ],
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "description": "A gatsby plugin to do tumble blog style media embeds, like photosets, videos, and links.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/isaacs/gatsby-remark-tumble-media.git"
+  },
+  "license": "ISC"
 }
