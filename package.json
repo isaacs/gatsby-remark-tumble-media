@@ -24,7 +24,7 @@
   "files": [
     "index.js"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A gatsby plugin to do tumble blog style media embeds, like photosets, videos, and links.",
   "main": "index.js",
   "repository": {
