@@ -77,13 +77,20 @@ For example, this markdown post:
 date: 2018-12-29
 photos:
   - - four-in-a-row.jpg
-    - cat.jpg
-  - - cat-on-its-own-row.jpg
+    - cat.jpg Alt text goes here
+  - - cat-on-its-own-row.jpg    Separate with any number of whitespace
   - - one-kitten.jpg
     - two-kittens.jpg
     - three-kitties.jpg
     - cat.png
-  - - moving-cat.gif
+  - - >-
+      moving-cat.gif If you have a very long alt text to write, you
+      can always take advantage of yaml's various features for folded
+      text like this. Quote characters like '"' will be escaped as
+      '&quo;' appropriately, but it should all be a single line in the
+      end.  It's probably not a great idea to have this much alt text
+      on an img tag, of course.  Just showing that the plugin will let
+      you do so.
 ---
 Aren't these such cute cats!?
 ```
