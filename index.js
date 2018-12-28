@@ -188,20 +188,33 @@ const media = ({ markdownNode, markdownAST, width }, embedHTML) => {
   mediaWidth($('iframe'), width)
   mediaWidth($('embed'), width)
   mediaWidth($('video'), width)
+  audioWidth($('audio'), width)
   return $('body').html()
+}
+
+const audioWidth = (node, width) => {
+  if (node && node.length) {
+    node.css('width', `${width}px`)
+    node.css('max-width', `100%`)
+  }
 }
 
 const mediaWidth = (node, width) => {
   if (node && node.length) {
     const startWidth = node.attr('width')
     const startHeight = node.attr('height')
+
+    // scale up or down appropriately
     const endHeight = startWidth && startHeight
-      // scale up or down appropriately
       ? startHeight * width / startWidth
       : null
+
     node.attr('width', width)
-    if (endHeight)
+    node.css('width', `${width}px`)
+    if (endHeight) {
       node.attr('height', endHeight)
+      node.css('height', `${endHeight}px`)
+    }
   }
 }
 
@@ -217,15 +230,20 @@ module.exports = async ({ getNode, markdownNode, markdownAST }, pluginOptions) =
 
   const front = markdownNode.frontmatter
   const arg = { markdownNode, markdownAST, dir, width }
-  const html = Array.isArray(front.photos) ? await photos(arg, front.photos)
-    : front.video ? media(arg, front.video)
-    : front.audio ? media(arg, front.audio)
+  const type = Array.isArray(front.photos) ? 'photoset'
+    : front.video ? 'video'
+    : front.audio ? 'audio'
+    : null
+
+  const html = type === 'photoset' ? await photos(arg, front.photos)
+    : type === 'video' ? media(arg, front.video)
+    : type === 'audio' ? media(arg, front.audio)
     : null
 
   if (html) {
     markdownAST.children.unshift({
       type: `html`,
-      value: `<div class="media">${html}</div>`
+      value: `<div class="media ${type}">${html}</div>`
     })
   }
 }
