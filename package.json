@@ -1,0 +1,11 @@
+{
+  "name":"gatsby-remark-tumble-media",
+  "version":"0.0.0",
+  "author":"Isaac Z. Schlueter <i@izs.me>",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin",
+    "gatsby-transformer-remark",
+    "gatsby-remark"
+  ]
+}
