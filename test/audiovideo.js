@@ -1,6 +1,6 @@
 const t = require('tap')
 const tumble = require('../')
-const { test, ast, astNoChange, node } = require('./basic.js')
+const { test, ast, astNoChange, node } = require('./common.js')
 
 t.test('basic video embed', async t => {
   const tags = ['object', 'iframe', 'embed', 'video']

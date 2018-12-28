@@ -1,6 +1,6 @@
 const t = require('tap')
 const tumble = require('../')
-const { test, ast, astNoChange, node } = require('./basic.js')
+const { test, ast, astNoChange, node } = require('./common.js')
 
 const path = require('path')
 const catdir = path.resolve(__dirname, 'cats')
