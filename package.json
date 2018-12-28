@@ -15,6 +15,9 @@
     "tap": "^12.1.1"
   },
   "scripts": {
+    "preversion": "npm test",
+    "postversion": "npm publish",
+    "postpublish": "git push origin --all; git push origin --tags",
     "test": "tap test/*.js --100",
     "snap": "TAP_SNAPSHOT=1 tap test/*.js"
   },
