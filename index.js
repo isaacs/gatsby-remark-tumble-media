@@ -154,6 +154,15 @@ const resets = {
     margin:0,
     'box-sizing':'border-box',
     border:0,
+  },
+  [([
+    '.photosettable',
+    '.photosettable tbody',
+    '.photosettable tr',
+    '.photosettable td',
+    '.photosettable .photo',
+    '.photosettable .ctr',
+  ]).join(',')]: {
     position:'static'
   },
   '.photosettable td.colcell': {
