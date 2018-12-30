@@ -123,7 +123,7 @@ const photoSet = (set, width)  => {
       return `<div class="ctr ${cls}">${ret}</div>`
     }
 
-    styles[`.photosettable img`] = `width:100%`
+    styles[`.photosettable img`] = `width:100%;display:block`
 
     return `<tr>${rowcell}${table}<tr>${
       row.map(p => `${colcell}${div}${img(p)}</div></td>`).join('\n')
