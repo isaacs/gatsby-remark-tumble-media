@@ -6,67 +6,67 @@
  */
 'use strict'
 exports[`test/audiovideo.js TAP basic video embed > tag=object w=null 1`] = `
-<div class="media video"><object width="700" style="width: 700px;"></object></div>
+<div class="media video"><object width="700" style="width: 700px; max-width: 100%;"></object></div>
 `
 
 exports[`test/audiovideo.js TAP basic video embed > tag=object w=420 1`] = `
-<div class="media video"><object width="420" style="width: 420px;"></object></div>
+<div class="media video"><object width="420" style="width: 420px; max-width: 100%;"></object></div>
 `
 
 exports[`test/audiovideo.js TAP basic video embed > tag=iframe w=null 1`] = `
-<div class="media video"><iframe width="700" style="width: 700px;"></iframe></div>
+<div class="media video"><iframe width="700" style="width: 700px; max-width: 100%;"></iframe></div>
 `
 
 exports[`test/audiovideo.js TAP basic video embed > tag=iframe w=420 1`] = `
-<div class="media video"><iframe width="420" style="width: 420px;"></iframe></div>
+<div class="media video"><iframe width="420" style="width: 420px; max-width: 100%;"></iframe></div>
 `
 
 exports[`test/audiovideo.js TAP basic video embed > tag=embed w=null 1`] = `
-<div class="media video"><embed width="700" style="width: 700px;"></div>
+<div class="media video"><embed width="700" style="width: 700px; max-width: 100%;"></div>
 `
 
 exports[`test/audiovideo.js TAP basic video embed > tag=embed w=420 1`] = `
-<div class="media video"><embed width="420" style="width: 420px;"></div>
+<div class="media video"><embed width="420" style="width: 420px; max-width: 100%;"></div>
 `
 
 exports[`test/audiovideo.js TAP basic video embed > tag=video w=null 1`] = `
-<div class="media video"><video width="700" style="width: 700px;"></video></div>
+<div class="media video"><video width="700" style="width: 700px; max-width: 100%;"></video></div>
 `
 
 exports[`test/audiovideo.js TAP basic video embed > tag=video w=420 1`] = `
-<div class="media video"><video width="420" style="width: 420px;"></video></div>
+<div class="media video"><video width="420" style="width: 420px; max-width: 100%;"></video></div>
 `
 
 exports[`test/audiovideo.js TAP basic audio embed > tag=object w=null 1`] = `
-<div class="media audio"><object style="width: 700px;" width="700"></object></div>
+<div class="media audio"><object style="width: 700px; max-width: 100%;" width="700"></object></div>
 `
 
 exports[`test/audiovideo.js TAP basic audio embed > tag=object w=666 1`] = `
-<div class="media audio"><object style="width: 700px;" width="700"></object></div>
+<div class="media audio"><object style="width: 700px; max-width: 100%;" width="700"></object></div>
 `
 
 exports[`test/audiovideo.js TAP basic audio embed > tag=iframe w=null 1`] = `
-<div class="media audio"><iframe style="width: 700px;" width="700"></iframe></div>
+<div class="media audio"><iframe style="width: 700px; max-width: 100%;" width="700"></iframe></div>
 `
 
 exports[`test/audiovideo.js TAP basic audio embed > tag=iframe w=666 1`] = `
-<div class="media audio"><iframe style="width: 700px;" width="700"></iframe></div>
+<div class="media audio"><iframe style="width: 700px; max-width: 100%;" width="700"></iframe></div>
 `
 
 exports[`test/audiovideo.js TAP basic audio embed > tag=embed w=null 1`] = `
-<div class="media audio"><embed style="width: 700px;" width="700"></div>
+<div class="media audio"><embed style="width: 700px; max-width: 100%;" width="700"></div>
 `
 
 exports[`test/audiovideo.js TAP basic audio embed > tag=embed w=666 1`] = `
-<div class="media audio"><embed style="width: 700px;" width="700"></div>
+<div class="media audio"><embed style="width: 700px; max-width: 100%;" width="700"></div>
 `
 
 exports[`test/audiovideo.js TAP basic audio embed > tag=video w=null 1`] = `
-<div class="media audio"><video style="width: 700px;" width="700"></video></div>
+<div class="media audio"><video style="width: 700px; max-width: 100%;" width="700"></video></div>
 `
 
 exports[`test/audiovideo.js TAP basic audio embed > tag=video w=666 1`] = `
-<div class="media audio"><video style="width: 700px;" width="700"></video></div>
+<div class="media audio"><video style="width: 700px; max-width: 100%;" width="700"></video></div>
 `
 
 exports[`test/audiovideo.js TAP basic audio embed > tag=audio w=null 1`] = `
@@ -78,21 +78,21 @@ exports[`test/audiovideo.js TAP basic audio embed > tag=audio w=666 1`] = `
 `
 
 exports[`test/audiovideo.js TAP scale video height > width=100 height=100 1`] = `
-<div class="media video"><object height="750" width="750" style="width: 750px; height: 750px;"><embed height="750" width="750" style="width: 750px; height: 750px;">
-              </object></div>
+<div class="media video"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 100%;"><object height="100" width="100" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 100%;"><embed height="100" width="100" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></div>
+              </object></div></div>
 `
 
 exports[`test/audiovideo.js TAP scale video height > width=900 height=100 1`] = `
-<div class="media video"><object height="83.333" width="750" style="width: 750px; height: 83.333px;"><embed height="83.333" width="750" style="width: 750px; height: 83.333px;">
-              </object></div>
+<div class="media video"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 11.11%;"><object height="100" width="900" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 11.11%;"><embed height="100" width="900" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></div>
+              </object></div></div>
 `
 
 exports[`test/audiovideo.js TAP scale video height > width=100 height=900 1`] = `
-<div class="media video"><object height="6750" width="750" style="width: 750px; height: 6750px;"><embed height="6750" width="750" style="width: 750px; height: 6750px;">
-              </object></div>
+<div class="media video"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 900%;"><object height="900" width="100" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 900%;"><embed height="900" width="100" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></div>
+              </object></div></div>
 `
 
 exports[`test/audiovideo.js TAP scale video height > width=900 height=900 1`] = `
-<div class="media video"><object height="750" width="750" style="width: 750px; height: 750px;"><embed height="750" width="750" style="width: 750px; height: 750px;">
-              </object></div>
+<div class="media video"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 100%;"><object height="900" width="900" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 100%;"><embed height="900" width="900" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></div>
+              </object></div></div>
 `

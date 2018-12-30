@@ -208,22 +208,44 @@ const audioWidth = (node, width) => {
 }
 
 const mediaWidth = (node, width) => {
-  if (node && node.length) {
-    const startWidth = node.attr('width')
-    const startHeight = node.attr('height')
+  if (!node || !node.length)
+    return
 
-    // scale up or down appropriately
-    const endHeight = startWidth && startHeight
-      ? Math.round(1000 * startHeight * width / startWidth) / 1000
-      : null
+  const startWidth = node.attr('width')
+  const startHeight = node.attr('height')
 
+  const aspect = Math.floor(startHeight / startWidth * 10000) / 100
+  if (isNaN(aspect)) {
+    // don't know both height and width, so just set the width
+    // to 100% and hope for the best!  Note that this is rare in
+    // most embeds, since they generally set the height and width
+    // to get the right aspect ratio.
     node.attr('width', width)
     node.css('width', `${width}px`)
-    if (endHeight) {
-      node.attr('height', endHeight)
-      node.css('height', `${endHeight}px`)
-    }
+    node.css('max-width', `100%`)
+    return
   }
+
+  // Wrap in a pos:rel div that is:
+  // width:100%
+  // overflow:hidden
+  // padding-top:(h/w * 100)px
+  // Then the object or iframe is pos:abs,
+  // top:0, left:0, width:100%, height:100%
+  node.css('position', 'absolute')
+  node.css('width', '100%')
+  node.css('height', '100%')
+  node.css('top', '0')
+  node.css('left', '0')
+  node.css('box-sizing', 'border-box')
+  node.css('margin', '0')
+  node.wrap('<div>', '</div>')
+  const parent = node.parent()
+  parent.css('width', '100%')
+  parent.css('position', 'relative')
+  parent.css('overflow', 'hidden')
+  parent.css('padding', '0')
+  parent.css('padding-top', `${aspect}%`)
 }
 
 module.exports = async ({ getNode, markdownNode, markdownAST }, pluginOptions) => {
