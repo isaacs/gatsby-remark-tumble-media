@@ -28,7 +28,7 @@
     "overrides.css",
     "base.css"
   ],
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A gatsby plugin to do tumble blog style media embeds, like photosets, videos, and links.",
   "main": "index.js",
   "repository": {
