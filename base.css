@@ -1,0 +1,20 @@
+.photosettable {
+  border-collapse: collapse;
+}
+.photosettable .rowcell, .photosettable .colcell {
+  border: solid #fff;
+}
+.photosettable .rowcell {
+  border-width: 10px 0;
+}
+.photosettable .colcell {
+  border-width: 0 10px;
+}
+.photosettable .photo {
+  max-width: 100%;
+  overflow: hidden;
+}
+.photosettable img {
+  width: 100%;
+  display: block;
+}

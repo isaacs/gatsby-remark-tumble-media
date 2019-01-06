@@ -9,72 +9,144 @@ exports[`test/audiovideo.js TAP basic video embed > tag=object w=null 1`] = `
 <div class="media video"><object width="700" style="width: 700px; max-width: 100%;"></object></div>
 `
 
+exports[`test/audiovideo.js TAP basic video embed > photoset css 1`] = `
+
+`
+
 exports[`test/audiovideo.js TAP basic video embed > tag=object w=420 1`] = `
 <div class="media video"><object width="420" style="width: 420px; max-width: 100%;"></object></div>
+`
+
+exports[`test/audiovideo.js TAP basic video embed > photoset css 2`] = `
+
 `
 
 exports[`test/audiovideo.js TAP basic video embed > tag=iframe w=null 1`] = `
 <div class="media video"><iframe width="700" style="width: 700px; max-width: 100%;"></iframe></div>
 `
 
+exports[`test/audiovideo.js TAP basic video embed > photoset css 3`] = `
+
+`
+
 exports[`test/audiovideo.js TAP basic video embed > tag=iframe w=420 1`] = `
 <div class="media video"><iframe width="420" style="width: 420px; max-width: 100%;"></iframe></div>
+`
+
+exports[`test/audiovideo.js TAP basic video embed > photoset css 4`] = `
+
 `
 
 exports[`test/audiovideo.js TAP basic video embed > tag=embed w=null 1`] = `
 <div class="media video"><embed width="700" style="width: 700px; max-width: 100%;"></div>
 `
 
+exports[`test/audiovideo.js TAP basic video embed > photoset css 5`] = `
+
+`
+
 exports[`test/audiovideo.js TAP basic video embed > tag=embed w=420 1`] = `
 <div class="media video"><embed width="420" style="width: 420px; max-width: 100%;"></div>
+`
+
+exports[`test/audiovideo.js TAP basic video embed > photoset css 6`] = `
+
 `
 
 exports[`test/audiovideo.js TAP basic video embed > tag=video w=null 1`] = `
 <div class="media video"><video width="700" style="width: 700px; max-width: 100%;"></video></div>
 `
 
+exports[`test/audiovideo.js TAP basic video embed > photoset css 7`] = `
+
+`
+
 exports[`test/audiovideo.js TAP basic video embed > tag=video w=420 1`] = `
 <div class="media video"><video width="420" style="width: 420px; max-width: 100%;"></video></div>
+`
+
+exports[`test/audiovideo.js TAP basic video embed > photoset css 8`] = `
+
 `
 
 exports[`test/audiovideo.js TAP basic audio embed > tag=object w=null 1`] = `
 <div class="media audio"><object style="width: 700px; max-width: 100%;" width="700"></object></div>
 `
 
+exports[`test/audiovideo.js TAP basic audio embed > photoset css 1`] = `
+
+`
+
 exports[`test/audiovideo.js TAP basic audio embed > tag=object w=666 1`] = `
 <div class="media audio"><object style="width: 700px; max-width: 100%;" width="700"></object></div>
+`
+
+exports[`test/audiovideo.js TAP basic audio embed > photoset css 2`] = `
+
 `
 
 exports[`test/audiovideo.js TAP basic audio embed > tag=iframe w=null 1`] = `
 <div class="media audio"><iframe style="width: 700px; max-width: 100%;" width="700"></iframe></div>
 `
 
+exports[`test/audiovideo.js TAP basic audio embed > photoset css 3`] = `
+
+`
+
 exports[`test/audiovideo.js TAP basic audio embed > tag=iframe w=666 1`] = `
 <div class="media audio"><iframe style="width: 700px; max-width: 100%;" width="700"></iframe></div>
+`
+
+exports[`test/audiovideo.js TAP basic audio embed > photoset css 4`] = `
+
 `
 
 exports[`test/audiovideo.js TAP basic audio embed > tag=embed w=null 1`] = `
 <div class="media audio"><embed style="width: 700px; max-width: 100%;" width="700"></div>
 `
 
+exports[`test/audiovideo.js TAP basic audio embed > photoset css 5`] = `
+
+`
+
 exports[`test/audiovideo.js TAP basic audio embed > tag=embed w=666 1`] = `
 <div class="media audio"><embed style="width: 700px; max-width: 100%;" width="700"></div>
+`
+
+exports[`test/audiovideo.js TAP basic audio embed > photoset css 6`] = `
+
 `
 
 exports[`test/audiovideo.js TAP basic audio embed > tag=video w=null 1`] = `
 <div class="media audio"><video style="width: 700px; max-width: 100%;" width="700"></video></div>
 `
 
+exports[`test/audiovideo.js TAP basic audio embed > photoset css 7`] = `
+
+`
+
 exports[`test/audiovideo.js TAP basic audio embed > tag=video w=666 1`] = `
 <div class="media audio"><video style="width: 700px; max-width: 100%;" width="700"></video></div>
+`
+
+exports[`test/audiovideo.js TAP basic audio embed > photoset css 8`] = `
+
 `
 
 exports[`test/audiovideo.js TAP basic audio embed > tag=audio w=null 1`] = `
 <div class="media audio"><audio style="width: 700px; max-width: 100%;" width="350"></audio></div>
 `
 
+exports[`test/audiovideo.js TAP basic audio embed > photoset css 9`] = `
+
+`
+
 exports[`test/audiovideo.js TAP basic audio embed > tag=audio w=666 1`] = `
 <div class="media audio"><audio style="width: 700px; max-width: 100%;" width="350"></audio></div>
+`
+
+exports[`test/audiovideo.js TAP basic audio embed > photoset css 10`] = `
+
 `
 
 exports[`test/audiovideo.js TAP scale video height > width=100 height=100 1`] = `
@@ -82,9 +154,17 @@ exports[`test/audiovideo.js TAP scale video height > width=100 height=100 1`] = 
               </object></div></div>
 `
 
+exports[`test/audiovideo.js TAP scale video height > photoset css 1`] = `
+
+`
+
 exports[`test/audiovideo.js TAP scale video height > width=900 height=100 1`] = `
 <div class="media video"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 11.11%;"><object height="100" width="900" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 11.11%;"><embed height="100" width="900" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></div>
               </object></div></div>
+`
+
+exports[`test/audiovideo.js TAP scale video height > photoset css 2`] = `
+
 `
 
 exports[`test/audiovideo.js TAP scale video height > width=100 height=900 1`] = `
@@ -92,7 +172,15 @@ exports[`test/audiovideo.js TAP scale video height > width=100 height=900 1`] = 
               </object></div></div>
 `
 
+exports[`test/audiovideo.js TAP scale video height > photoset css 3`] = `
+
+`
+
 exports[`test/audiovideo.js TAP scale video height > width=900 height=900 1`] = `
 <div class="media video"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 100%;"><object height="900" width="900" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 100%;"><embed height="900" width="900" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></div>
               </object></div></div>
+`
+
+exports[`test/audiovideo.js TAP scale video height > photoset css 4`] = `
+
 `

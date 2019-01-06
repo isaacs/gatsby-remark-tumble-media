@@ -22,7 +22,11 @@
     "snap": "TAP_SNAPSHOT=1 tap test/*.js"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "gatsby-browser.js",
+    "gatsby-node.js",
+    "overrides.css",
+    "base.css"
   ],
   "version": "1.0.3",
   "description": "A gatsby plugin to do tumble blog style media embeds, like photosets, videos, and links.",

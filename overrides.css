@@ -1,0 +1,34 @@
+@media (max-width: ${width}px) {
+  .photosettable,
+  .photosettable tbody,
+  .photosettable tr,
+  .photosettable td,
+  .photosettable .photo,
+  .photosettable .ctr,
+  .photosettable img {
+    display: block!important;
+    width: 100%!important;
+    height: auto!important;
+    margin: 0!important;
+    box-sizing: border-box!important;
+    border: 0!important;
+  }
+  .photosettable,
+  .photosettable tbody,
+  .photosettable tr,
+  .photosettable td,
+  .photosettable .photo,
+  .photosettable .ctr {
+    position: static!important;
+  }
+  .photosettable td.colcell {
+    border: 10px solid #fff!important;
+    border-bottom: 0!important;
+  }
+  .photosettable {
+    border-bottom: 10px solid #fff!important;
+  }
+  .photosettable .photosettable {
+    border: 0!important;
+  }
+}

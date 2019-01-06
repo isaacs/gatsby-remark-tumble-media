@@ -16,6 +16,13 @@ t.test('solo image, scale down', async t => test(
   ast(t, `solo cat`),
   200))
 
+t.test('repetitive styles', async t => test(
+  node({ photos:
+   [ [ 'four-in-a-row.jpg', 'cat.jpg' ],
+     [ 'four-in-a-row.jpg', 'cat.jpg' ] ] }, catdir),
+  ast(t, `repetive cats`),
+  700))
+
 t.test('several rows', async t => test(
   node({ photos:
    [ [ 'four-in-a-row.jpg', 'cat.jpg' ],
