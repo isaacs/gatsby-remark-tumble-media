@@ -4,6 +4,11 @@ const cheerio = require('cheerio')
 const fs = require('fs')
 const mkdirp = require('mkdirp')
 const url = require('url')
+const https = require('https')
+
+const oembedAPI = {
+  youtube: 'https://www.youtube.com/oembed?url=',
+}
 
 module.exports = async ({ getNode, markdownNode, markdownAST }, pluginOptions) => {
   const width = pluginOptions.maxWidth || 700
@@ -26,7 +31,8 @@ module.exports = async ({ getNode, markdownNode, markdownAST }, pluginOptions) =
   const html = type === 'photoset' ? await photos(arg, front.photos)
     : type === 'video' ? media(arg, front.video)
     : type === 'audio' ? media(arg, front.audio)
-    : type === 'video youtube' ? youtube(arg, front.youtube)
+    : type === 'video youtube'
+      ? await oembed(arg, 'youtube', front.youtube)
     : null
 
   if (html) {
@@ -37,18 +43,26 @@ module.exports = async ({ getNode, markdownNode, markdownAST }, pluginOptions) =
   }
 }
 
-const youtube = (arg, yt) => {
-  const u = url.parse(yt, { parseQueryString: true })
-  const v = u.pathname === '/watch' && u.query.v ? u.query.v
-    : u.host === 'youtu.be' ? u.pathname.replace(/^\//, '')
-    : null
+const oembed = (arg, api, video) => new Promise((resolve) => {
+  const oembedRoot = oembedAPI[api]
+  const oe = oembedRoot + encodeURIComponent(video)
+  https.get(oe, res => {
+    if (res.statusCode !== 200)
+      return resolve(null)
 
-  const t = u.query.t ? `?start=${u.query.t}` : ''
-
-  if (v) {
-    return media(arg, `<iframe width="560" height="315" src="https:/www.youtube.com/embed/${v}${t}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`)
-  }
-}
+    const d = []
+    res.setEncoding('utf8')
+    res.on('data', c => d.push(c))
+    res.on('end', () => {
+      try {
+        const e = JSON.parse(d.join(''))
+        resolve(media(arg, e.html))
+      } catch (er) {
+        resolve(null)
+      }
+    })
+  })
+})
 
 // write out each photoset <style> css into styles/{selector hash}.css,
 // but only if that file doesn't already exist, to prevent repetition
