@@ -8,6 +8,7 @@ const https = require('https')
 
 const oembedAPI = {
   youtube: 'https://www.youtube.com/oembed?url=',
+  vimeo: 'https://vimeo.com/api/oembed.json?url=',
 }
 
 module.exports = async ({ getNode, markdownNode, markdownAST }, pluginOptions) => {
@@ -26,6 +27,7 @@ module.exports = async ({ getNode, markdownNode, markdownAST }, pluginOptions) =
     : front.video ? 'video'
     : front.audio ? 'audio'
     : front.youtube ? 'video youtube'
+    : front.vimeo ? 'video vimeo'
     : null
 
   const html = type === 'photoset' ? await photos(arg, front.photos)
@@ -33,6 +35,8 @@ module.exports = async ({ getNode, markdownNode, markdownAST }, pluginOptions) =
     : type === 'audio' ? media(arg, front.audio)
     : type === 'video youtube'
       ? await oembed(arg, 'youtube', front.youtube)
+    : type === 'video vimeo'
+      ? await oembed(arg, 'vimeo', front.vimeo)
     : null
 
   if (html) {

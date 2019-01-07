@@ -155,3 +155,16 @@ title: Great new hit single
 ---
 Check out this new video I just found!
 ```
+
+### Vimeo Videos
+
+To embed a Vimeo video, put the Vimeo url in the `vimeo` field in the
+markdown frontmatter.
+
+```
+---
+vimeo: https://vimeo.com/232554578
+title: Tar Wars
+---
+It is a period of civil war...
+```

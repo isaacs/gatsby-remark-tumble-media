@@ -33,6 +33,21 @@ t.test('youtube url embeds', t => {
   })
 })
 
+t.test('vimeo url embeds', t => {
+  const urls = [
+    'https://vimeo.com/232554578',
+    'https://example.com',
+    'https://vimeo.com/52900095',
+  ]
+  t.plan(urls.length)
+  urls.forEach(u => {
+    t.test(u, t => test(
+      node({ vimeo: u }, '123'),
+      ast(t, `vimeo ${u}`),
+      420))
+  })
+})
+
 t.test('basic audio embed', async t => {
   const tags = ['object', 'iframe', 'embed', 'video', 'audio']
   const widths = [ null, 666 ]
