@@ -62,6 +62,7 @@ const oembed = (arg, api, video) => new Promise((resolve) => {
         const e = JSON.parse(d.join(''))
         resolve(media(arg, e.html))
       } catch (er) {
+        /* istanbul ignore next */
         resolve(null)
       }
     })
