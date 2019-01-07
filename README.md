@@ -142,3 +142,16 @@ Check out this new video I just found!
 
 You can also do local files with a `<video>` tag.  [Here's an
 example.](https://github.com/isaacs/blog.izs.me/tree/master/src/pages/2014/04/adaytoromana-this-kinda-makes-me-uncomfortable)
+
+### YouTube Videos
+
+To embed a YouTube video, put the YouTube url in the `youtube`
+field in the markdown frontmatter.
+
+```
+---
+youtube: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+title: Great new hit single
+---
+Check out this new video I just found!
+```

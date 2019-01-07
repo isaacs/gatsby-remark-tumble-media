@@ -69,6 +69,42 @@ exports[`test/audiovideo.js TAP basic video embed > photoset css 8`] = `
 
 `
 
+exports[`test/audiovideo.js TAP youtube url embeds https://www.youtube.com/watch?v=oIIxlgcuQRU > youtube https://www.youtube.com/watch?v=oIIxlgcuQRU 1`] = `
+<div class="media video youtube"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 56.25%;"><iframe width="560" height="315" src="https:/www.youtube.com/embed/oIIxlgcuQRU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></iframe></div></div>
+`
+
+exports[`test/audiovideo.js TAP youtube url embeds https://www.youtube.com/watch?v=oIIxlgcuQRU > photoset css 1`] = `
+
+`
+
+exports[`test/audiovideo.js TAP youtube url embeds https://youtu.be/oIIxlgcuQRU > youtube https://youtu.be/oIIxlgcuQRU 1`] = `
+<div class="media video youtube"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 56.25%;"><iframe width="560" height="315" src="https:/www.youtube.com/embed/oIIxlgcuQRU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></iframe></div></div>
+`
+
+exports[`test/audiovideo.js TAP youtube url embeds https://youtu.be/oIIxlgcuQRU > photoset css 1`] = `
+
+`
+
+exports[`test/audiovideo.js TAP youtube url embeds https://youtu.be/oIIxlgcuQRU?t=36 > youtube https://youtu.be/oIIxlgcuQRU?t=36 1`] = `
+<div class="media video youtube"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 56.25%;"><iframe width="560" height="315" src="https:/www.youtube.com/embed/oIIxlgcuQRU?start=36" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></iframe></div></div>
+`
+
+exports[`test/audiovideo.js TAP youtube url embeds https://youtu.be/oIIxlgcuQRU?t=36 > photoset css 1`] = `
+
+`
+
+exports[`test/audiovideo.js TAP youtube url embeds https://www.youtube.com/watch?v=oIIxlgcuQRU&t=36 > youtube https://www.youtube.com/watch?v=oIIxlgcuQRU&t=36 1`] = `
+<div class="media video youtube"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 56.25%;"><iframe width="560" height="315" src="https:/www.youtube.com/embed/oIIxlgcuQRU?start=36" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></iframe></div></div>
+`
+
+exports[`test/audiovideo.js TAP youtube url embeds https://www.youtube.com/watch?v=oIIxlgcuQRU&t=36 > photoset css 1`] = `
+
+`
+
+exports[`test/audiovideo.js TAP youtube url embeds https://not.youtube.url.com/ > photoset css 1`] = `
+
+`
+
 exports[`test/audiovideo.js TAP basic audio embed > tag=object w=null 1`] = `
 <div class="media audio"><object style="width: 700px; max-width: 100%;" width="700"></object></div>
 `

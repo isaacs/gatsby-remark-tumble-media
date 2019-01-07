@@ -16,6 +16,23 @@ t.test('basic video embed', async t => {
   }
 })
 
+t.test('youtube url embeds', t => {
+  const urls = [
+    'https://www.youtube.com/watch?v=oIIxlgcuQRU',
+    'https://youtu.be/oIIxlgcuQRU',
+    'https://youtu.be/oIIxlgcuQRU?t=36',
+    'https://www.youtube.com/watch?v=oIIxlgcuQRU&t=36',
+    'https://not.youtube.url.com/',
+  ]
+  t.plan(urls.length)
+  urls.forEach(u => {
+    t.test(u, t => test(
+      node({ youtube: u }, '123'),
+      ast(t, `youtube ${u}`),
+      420))
+  })
+})
+
 t.test('basic audio embed', async t => {
   const tags = ['object', 'iframe', 'embed', 'video', 'audio']
   const widths = [ null, 666 ]

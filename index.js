@@ -3,6 +3,7 @@ const path = require('path')
 const cheerio = require('cheerio')
 const fs = require('fs')
 const mkdirp = require('mkdirp')
+const url = require('url')
 
 module.exports = async ({ getNode, markdownNode, markdownAST }, pluginOptions) => {
   const width = pluginOptions.maxWidth || 700
@@ -19,11 +20,13 @@ module.exports = async ({ getNode, markdownNode, markdownAST }, pluginOptions) =
   const type = Array.isArray(front.photos) ? 'photoset'
     : front.video ? 'video'
     : front.audio ? 'audio'
+    : front.youtube ? 'video youtube'
     : null
 
   const html = type === 'photoset' ? await photos(arg, front.photos)
     : type === 'video' ? media(arg, front.video)
     : type === 'audio' ? media(arg, front.audio)
+    : type === 'video youtube' ? youtube(arg, front.youtube)
     : null
 
   if (html) {
@@ -31,6 +34,19 @@ module.exports = async ({ getNode, markdownNode, markdownAST }, pluginOptions) =
       type: `html`,
       value: `<div class="media ${type}">${html}</div>`
     })
+  }
+}
+
+const youtube = (arg, yt) => {
+  const u = url.parse(yt, { parseQueryString: true })
+  const v = u.pathname === '/watch' && u.query.v ? u.query.v
+    : u.host === 'youtu.be' ? u.pathname.replace(/^\//, '')
+    : null
+
+  const t = u.query.t ? `?start=${u.query.t}` : ''
+
+  if (v) {
+    return media(arg, `<iframe width="560" height="315" src="https:/www.youtube.com/embed/${v}${t}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`)
   }
 }
 
