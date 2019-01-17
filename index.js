@@ -108,13 +108,19 @@ const photos = async ({ markdownNode, markdownAST, dir, width }) => {
     set[i] = []
     for (let j = 0; j < row.length; j++) {
       const p = row[j]
-      const meta = await sharp(path.resolve(dir, p.split(' ')[0])).metadata()
-      set[i].push({
-        file: path.resolve(dir, p.split(' ')[0]),
-        url: p.split(' ')[0],
-        alt: p.split(' ').slice(1).join(' ').replace(/"/g, "&quo;"),
-        meta: meta
-      })
+      const [f, ...alt] = p.split(' ')
+      try {
+        const meta = await sharp(path.resolve(dir, f)).metadata()
+        set[i].push({
+          file: path.resolve(dir, p.split(' ')[0]),
+          url: f,
+          alt: alt.join(' ').replace(/"/g, "&quo;"),
+          meta: meta
+        })
+      } catch (er) {
+        console.error(`Error loading "${dir}/${f}"`)
+        console.error(er)
+      }
     }
   }
 
