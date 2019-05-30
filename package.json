@@ -9,17 +9,17 @@
   ],
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
-    "sharp": "^0.21.1"
+    "sharp": "^0.22.1"
   },
   "devDependencies": {
-    "tap": "^12.1.1"
+    "tap": "^14.2.0"
   },
   "scripts": {
     "preversion": "npm test",
     "postversion": "npm publish",
-    "postpublish": "git push origin --all; git push origin --tags",
-    "test": "tap test/*.js --100",
-    "snap": "TAP_SNAPSHOT=1 tap test/*.js"
+    "postpublish": "git push origin --follow-tags",
+    "test": "tap",
+    "snap": "tap"
   },
   "files": [
     "index.js",
@@ -35,5 +35,13 @@
     "type": "git",
     "url": "git+https://github.com/isaacs/gatsby-remark-tumble-media.git"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "tap": {
+    "files": [
+      "test/00-cleanup.js",
+      "test/cases",
+      "test/zz-cleanup.js"
+    ],
+    "100": true
+  }
 }

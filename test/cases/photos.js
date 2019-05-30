@@ -1,5 +1,5 @@
 const t = require('tap')
-const tumble = require('../')
+const tumble = require('../..')
 const { test, ast, astNoChange, node } = require('./common.js')
 
 const path = require('path')

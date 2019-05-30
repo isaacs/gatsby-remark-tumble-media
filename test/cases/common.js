@@ -1,8 +1,8 @@
-const tumble = require('../')
-const plugin = require('../gatsby-node.js')
+const tumble = require('../..')
+const plugin = require('../../gatsby-node.js')
 const fs = require('fs')
 const path = require('path')
-const css = path.resolve(`${__dirname}/../photoset.css`)
+const css = path.resolve(`${__dirname}/../../photoset.css`)
 
 const test = exports.test = async (node, ast, width) =>
   await tumble({
