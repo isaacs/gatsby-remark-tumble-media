@@ -28,7 +28,7 @@
     "overrides.css",
     "base.css"
   ],
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A gatsby plugin to do tumble blog style media embeds, like photosets, videos, and links.",
   "main": "index.js",
   "repository": {
@@ -37,11 +37,11 @@
   },
   "license": "ISC",
   "tap": {
+    "100": true,
     "files": [
       "test/00-cleanup.js",
       "test/cases",
       "test/zz-cleanup.js"
-    ],
-    "100": true
+    ]
   }
 }
