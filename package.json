@@ -9,10 +9,10 @@
   ],
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
-    "sharp": "^0.22.1"
+    "sharp": "^0.23.3"
   },
   "devDependencies": {
-    "tap": "^14.2.0"
+    "tap": "^14.10.1"
   },
   "scripts": {
     "preversion": "npm test",
