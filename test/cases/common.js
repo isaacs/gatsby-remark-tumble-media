@@ -10,6 +10,7 @@ const test = exports.test = async (node, ast, width) =>
     markdownNode: node,
     markdownAST: ast,
   }, { maxWidth: width }).then(() => {
+    plugin.onPostBootstrap()
     plugin.onPostBuild({}, { maxWidth: width })
     ast.t.matchSnapshot(fs.readFileSync(css, 'utf8'), 'photoset css')
   })

@@ -18,8 +18,8 @@
     "preversion": "npm test",
     "postversion": "npm publish",
     "postpublish": "git push origin --follow-tags",
-    "test": "tap",
-    "snap": "tap"
+    "test": "tap -j1",
+    "snap": "tap -j1"
   },
   "files": [
     "index.js",
