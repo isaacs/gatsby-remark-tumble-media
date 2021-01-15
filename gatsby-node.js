@@ -2,6 +2,11 @@ const fs = require('fs')
 const rimraf = require('rimraf')
 const mkdirp = require('mkdirp')
 
+// have to create the file, or it errors out, even though it's
+// not going to be ready to write its actual contents until postBuild
+exports.onPostBootstrap = () => {
+  fs.writeFileSync(`${__dirname}/photoset.css`, '')
+}
 exports.onPreBootstrap = () => {
   rimraf.sync(`${__dirname}/styles`)
   mkdirp.sync(`${__dirname}/styles`)
