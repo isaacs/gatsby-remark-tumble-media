@@ -1202,7 +1202,7 @@ exports[`test/cases/audiovideo.js TAP vimeo url embeds https://vimeo.com/2325545
 `
 
 exports[`test/cases/audiovideo.js TAP vimeo url embeds https://vimeo.com/232554578 > vimeo https://vimeo.com/232554578 1`] = `
-<div class="media video vimeo"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 55.31%;"><iframe src="https://player.vimeo.com/video/232554578?app_id=122963" width="640" height="354" frameborder="0" allow="autoplay; fullscreen" allowfullscreen title="Tar Wars" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></iframe></div></div>
+<div class="media video vimeo"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 55.31%;"><iframe src="https://player.vimeo.com/video/232554578?app_id=122963" width="640" height="354" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Tar Wars" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></iframe></div></div>
 `
 
 exports[`test/cases/audiovideo.js TAP vimeo url embeds https://vimeo.com/52900095 > photoset css 1`] = `
@@ -1273,7 +1273,7 @@ exports[`test/cases/audiovideo.js TAP vimeo url embeds https://vimeo.com/5290009
 `
 
 exports[`test/cases/audiovideo.js TAP vimeo url embeds https://vimeo.com/52900095 > vimeo https://vimeo.com/52900095 1`] = `
-<div class="media video vimeo"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/52900095?app_id=122963" width="480" height="270" frameborder="0" allow="autoplay; fullscreen" allowfullscreen title="Perfect Coffee" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></iframe></div></div>
+<div class="media video vimeo"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 56.25%;"><iframe src="https://player.vimeo.com/video/52900095?app_id=122963" width="480" height="270" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="Perfect Coffee" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></iframe></div></div>
 `
 
 exports[`test/cases/audiovideo.js TAP youtube url embeds https://not.youtube.url.com/ > photoset css 1`] = `
@@ -1411,7 +1411,7 @@ exports[`test/cases/audiovideo.js TAP youtube url embeds https://www.youtube.com
 `
 
 exports[`test/cases/audiovideo.js TAP youtube url embeds https://www.youtube.com/watch?v=oIIxlgcuQRU > youtube https://www.youtube.com/watch?v=oIIxlgcuQRU 1`] = `
-<div class="media video youtube"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 56.25%;"><iframe width="480" height="270" src="https://www.youtube.com/embed/oIIxlgcuQRU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></iframe></div></div>
+<div class="media video youtube"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 75%;"><iframe width="200" height="150" src="https://www.youtube.com/embed/oIIxlgcuQRU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></iframe></div></div>
 `
 
 exports[`test/cases/audiovideo.js TAP youtube url embeds https://www.youtube.com/watch?v=oIIxlgcuQRU&t=36 > photoset css 1`] = `
@@ -1482,7 +1482,7 @@ exports[`test/cases/audiovideo.js TAP youtube url embeds https://www.youtube.com
 `
 
 exports[`test/cases/audiovideo.js TAP youtube url embeds https://www.youtube.com/watch?v=oIIxlgcuQRU&t=36 > youtube https://www.youtube.com/watch?v=oIIxlgcuQRU&t=36 1`] = `
-<div class="media video youtube"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 56.25%;"><iframe width="480" height="270" src="https://www.youtube.com/embed/oIIxlgcuQRU?start=36&amp;feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></iframe></div></div>
+<div class="media video youtube"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 75%;"><iframe width="200" height="150" src="https://www.youtube.com/embed/oIIxlgcuQRU?start=36&amp;feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></iframe></div></div>
 `
 
 exports[`test/cases/audiovideo.js TAP youtube url embeds https://youtu.be/oIIxlgcuQRU > photoset css 1`] = `
@@ -1553,7 +1553,7 @@ exports[`test/cases/audiovideo.js TAP youtube url embeds https://youtu.be/oIIxlg
 `
 
 exports[`test/cases/audiovideo.js TAP youtube url embeds https://youtu.be/oIIxlgcuQRU > youtube https://youtu.be/oIIxlgcuQRU 1`] = `
-<div class="media video youtube"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 56.25%;"><iframe width="480" height="270" src="https://www.youtube.com/embed/oIIxlgcuQRU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></iframe></div></div>
+<div class="media video youtube"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 75%;"><iframe width="200" height="150" src="https://www.youtube.com/embed/oIIxlgcuQRU?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></iframe></div></div>
 `
 
 exports[`test/cases/audiovideo.js TAP youtube url embeds https://youtu.be/oIIxlgcuQRU?t=36 > photoset css 1`] = `
@@ -1624,5 +1624,5 @@ exports[`test/cases/audiovideo.js TAP youtube url embeds https://youtu.be/oIIxlg
 `
 
 exports[`test/cases/audiovideo.js TAP youtube url embeds https://youtu.be/oIIxlgcuQRU?t=36 > youtube https://youtu.be/oIIxlgcuQRU?t=36 1`] = `
-<div class="media video youtube"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 56.25%;"><iframe width="480" height="270" src="https://www.youtube.com/embed/oIIxlgcuQRU?start=36&amp;feature=oembed" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></iframe></div></div>
+<div class="media video youtube"><div style="width: 100%; position: relative; overflow: hidden; padding: 0; padding-top: 75%;"><iframe width="200" height="150" src="https://www.youtube.com/embed/oIIxlgcuQRU?start=36&amp;feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; box-sizing: border-box; margin: 0;"></iframe></div></div>
 `

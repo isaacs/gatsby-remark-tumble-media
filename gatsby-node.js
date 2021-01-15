@@ -7,7 +7,7 @@ exports.onPreBootstrap = () => {
   mkdirp.sync(`${__dirname}/styles`)
 }
 
-exports.onPostBootstrap = (_, pluginOptions) => {
+exports.onPostBuild = (_, pluginOptions) => {
   // gather up the css into the file that the gatsby-browser.js will load
   const overrides = fs.readFileSync(`${__dirname}/overrides.css`, 'utf8')
     .replace(/\$\{width\}/g, pluginOptions.maxWidth || 700)
