@@ -35,7 +35,7 @@
     "type": "git",
     "url": "git+https://github.com/isaacs/gatsby-remark-tumble-media.git"
   },
-  "license": "ISC",
+  "license": "BlueOak-1.0.0",
   "tap": {
     "100": true,
     "files": [
